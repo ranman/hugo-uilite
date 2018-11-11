@@ -36,22 +36,22 @@
          "@type": "WebPage",
          "@id": "{{ .Site.BaseURL }}"
     },
-    "articleSection" : "{{ .Section }}",
-    "name" : "{{ .Title }}",
-    "headline" : "{{ .Title }}",
-    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
-    "inLanguage" : "{{ .Site.LanguageCode }}",
-    "author" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
-    "creator" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
+    "articleSection": "{{ .Section }}",
+    "name": "{{ .Title }}",
+    "headline": "{{ .Title }}",
+    "description": "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+    "inLanguage": "{{ .Site.LanguageCode }}",
+    "author": "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
+    "creator": "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
     "publisher": "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
-    "accountablePerson" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
-    "copyrightHolder" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
-    "copyrightYear" : "{{ .Date.Format "2006" }}",
+    "accountablePerson": "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
+    "copyrightHolder": "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
+    "copyrightYear": "{{ .Date.Format "2018" }}",
     "datePublished": "{{ .Date }}",
-    "dateModified" : "{{ .Date }}",
-    "url" : "{{ .Permalink }}",
-    "wordCount" : "{{ .WordCount }}",
-    "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }} {{with .Site.Title}}"{{ .}}"{{ end }}]
+    "dateModified": "{{ .Date }}",
+    "url": "{{ .Permalink }}",
+    "wordCount": "{{ .WordCount }}",
+    "keywords": [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }} {{with .Site.Title}}"{{ .}}"{{ end }}]
 }
 </script>
 {{ end }}
