@@ -48,6 +48,6 @@ $(document).ready(function(){
 
   setTimeout(function(){
     $(".main-content").addClass("active");
-  }, 400);
+  }, 1000);
 
 });
